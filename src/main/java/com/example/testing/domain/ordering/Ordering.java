@@ -2,6 +2,7 @@ package com.example.testing.domain.ordering;
 
 import com.example.testing.domain.orderingposition.OrderingPosition;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -12,17 +13,9 @@ import java.util.UUID;
 public class Ordering {
 
     @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(
-            name = "UUID",
-            strategy = "org.hibernate.id.UUIDGenerator",
-            parameters = {
-                    @org.hibernate.annotations.Parameter(
-                            name = "uuid_gen_strategy_class",
-                            value = "org.hibernate.id.uuid.CustomVersionOneStrategy"
-                    )
-            }
-    )
+    @GeneratedValue(generator = "uuid2")
+    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @Type(type="uuid-char")
     @Column(name = "id", updatable = false, nullable = false)
     private UUID id;
 
