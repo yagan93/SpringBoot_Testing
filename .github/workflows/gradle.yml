@@ -35,4 +35,3 @@ jobs:
       run: ./gradlew test --tests '*UnitTests'
     - name: Execute Integration Tests
       run: ./gradlew test --tests '*IntegrationTests'
-
