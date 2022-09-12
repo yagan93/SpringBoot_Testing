@@ -28,5 +28,8 @@ jobs:
       with:
         java-version: '18'
         distribution: 'temurin'
-    - name: Build with Gradle
-      run: ./gradlew build
+    - name: Execute Unit Tests
+      run: ./gradlew test --tests '*UnitTests'
+    - name: Execute Integration Tests
+      run: ./gradlew test --tests '*IntegrationTests'
+
