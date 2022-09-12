@@ -20,6 +20,7 @@ jobs:
   dynamicTesting:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
     - name: Execute Unit Tests
       run: ./gradlew test --tests '*UnitTests'
     - name: Execute Integration Tests
