@@ -14,9 +14,7 @@ jobs:
   staticTesting:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
+    - uses: actions/checkout@v3
     - name: Analysis
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  
