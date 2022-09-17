@@ -1,26 +1,23 @@
 package com.example.testing.domain.product.dto;
 
+import com.example.testing.core.generic.ExtendedDTO;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.UUID;
 
-public class ProductDTO {
-    private UUID id;
+public class ProductDTO extends ExtendedDTO {
+
+    @NotNull
+    @Size(min = 1, max = 255)
     private String name;
 
     public ProductDTO() {
     }
 
     public ProductDTO(UUID id, String name) {
-        this.id = id;
+        super(id);
         this.name = name;
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public ProductDTO setId(UUID id) {
-        this.id = id;
-        return this;
     }
 
     public String getName() {

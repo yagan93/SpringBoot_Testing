@@ -1,7 +1,7 @@
 package com.example.testing.domain.orderingposition;
 
-import java.util.List;
+import com.example.testing.core.generic.ExtendedService;
 
-public interface OrderingPositionService {
-    List<OrderingPosition> findAll();
+public interface OrderingPositionService extends ExtendedService<OrderingPosition> {
+
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.testing.domain.product.unit.ProductServiceImplUnitTests" tests="3" skipped="2" failures="0" errors="0" timestamp="2022-09-12T10:06:40" hostname="Yvess-MacBook-Pro-2.local" time="0.058">
+<testsuite name="com.example.testing.domain.product.unit.ProductServiceImplUnitTests" tests="3" skipped="2" failures="0" errors="0" timestamp="2022-09-17T12:26:47" hostname="Yvess-MacBook-Pro.local" time="0.02">
   <properties/>
-  <testcase name="findById_requestProductById_expectProduct()" classname="com.example.testing.domain.product.unit.ProductServiceImplUnitTests" time="0.057"/>
+  <testcase name="findById_requestProductById_expectProduct()" classname="com.example.testing.domain.product.unit.ProductServiceImplUnitTests" time="0.02"/>
   <testcase name="isPriceOfProductAbove_provideProduct_expectItToBeAboveGivenPrice()" classname="com.example.testing.domain.product.unit.ProductServiceImplUnitTests" time="0.0">
     <skipped/>
   </testcase>

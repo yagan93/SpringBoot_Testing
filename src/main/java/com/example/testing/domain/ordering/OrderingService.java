@@ -1,9 +1,6 @@
 package com.example.testing.domain.ordering;
 
-import java.util.List;
+import com.example.testing.core.generic.ExtendedService;
 
-public interface OrderingService {
-    Ordering save(Ordering ordering);
-
-    List<Ordering> findAll();
+public interface OrderingService extends ExtendedService<Ordering> {
 }

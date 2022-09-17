@@ -1,10 +1,8 @@
 package com.example.testing.domain.ordering;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.example.testing.core.generic.ExtendedRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.UUID;
-
 @Repository
-public interface OrderingRepository extends JpaRepository<Ordering, UUID> {
+public interface OrderingRepository extends ExtendedRepository<Ordering> {
 }

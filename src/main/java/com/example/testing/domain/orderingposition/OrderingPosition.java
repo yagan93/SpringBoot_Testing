@@ -1,23 +1,17 @@
 package com.example.testing.domain.orderingposition;
 
+import com.example.testing.core.generic.ExtendedEntity;
 import com.example.testing.domain.ordering.Ordering;
 import com.example.testing.domain.product.Product;
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Type;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import java.util.UUID;
 
 @Entity
-public class OrderingPosition {
-
-    @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
-    @Type(type="uuid-char")
-    @Column(name = "id", updatable = false, nullable = false)
-    private UUID id;
+public class OrderingPosition extends ExtendedEntity {
 
     @ManyToOne()
     @JoinColumn(name = "ordering_id", referencedColumnName = "id", nullable = false)
@@ -34,19 +28,10 @@ public class OrderingPosition {
     }
 
     public OrderingPosition(UUID id, Ordering ordering, Product product, int amount) {
-        this.id = id;
+        super(id);
         this.ordering = ordering;
         this.product = product;
         this.amount = amount;
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public OrderingPosition setId(UUID id) {
-        this.id = id;
-        return this;
     }
 
     public Ordering getOrdering() {

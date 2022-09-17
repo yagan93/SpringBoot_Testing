@@ -48,7 +48,7 @@ public class ProductServiceImplUnitTests {
         given(productRepository.findById(any(UUID.class))).will(invocation -> {
             if ("non-existent".equals(invocation.getArgument(0)))
                 throw new NoSuchElementException("No such product present");
-            return Optional.ofNullable(dummyProduct);
+            return Optional.of(dummyProduct);
         });
 
         assertThat(productService.findById(dummyProduct.getId())).usingRecursiveComparison().isEqualTo(dummyProduct);

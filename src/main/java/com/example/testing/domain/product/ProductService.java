@@ -1,16 +1,10 @@
 package com.example.testing.domain.product;
 
+import com.example.testing.core.generic.ExtendedService;
+
 import java.util.List;
-import java.util.UUID;
 
-public interface ProductService {
-    List<Product> findAll();
-
-    Product findById(UUID id);
-
-    Product save(Product product);
-
-    Void deleteById(UUID id);
+public interface ProductService extends ExtendedService<Product> {
 
     Integer accumulatedPriceOfAllProducts(List<Product> products);
 
