@@ -3,6 +3,7 @@ package com.example.testing.domain.ordering.dto;
 import com.example.testing.core.generic.ExtendedDTO;
 import com.example.testing.domain.orderingposition.dto.OrderingPositionDTO;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.Set;
 import java.util.UUID;
@@ -10,6 +11,7 @@ import java.util.UUID;
 public class OrderingDTO extends ExtendedDTO {
 
     @NotNull
+    @Valid
     private Set<OrderingPositionDTO> orderingPositions;
 
     public OrderingDTO() {

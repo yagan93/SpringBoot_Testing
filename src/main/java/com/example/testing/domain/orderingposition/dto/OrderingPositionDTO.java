@@ -3,12 +3,14 @@ package com.example.testing.domain.orderingposition.dto;
 import com.example.testing.core.generic.ExtendedDTO;
 import com.example.testing.domain.product.dto.ProductDTO;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
 public class OrderingPositionDTO extends ExtendedDTO {
 
     @NotNull
+    @Valid
     private ProductDTO product;
 
     @NotNull

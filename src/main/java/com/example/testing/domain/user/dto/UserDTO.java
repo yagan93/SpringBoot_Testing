@@ -16,6 +16,7 @@ public class UserDTO extends ExtendedDTO {
 
     @Email
     private String email;
+
     @Valid
     private Set<RoleDTO> roles;
 

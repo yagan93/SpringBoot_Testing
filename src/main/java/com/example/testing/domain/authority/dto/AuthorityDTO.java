@@ -15,15 +15,12 @@ public class AuthorityDTO extends ExtendedDTO {
     @Size(min = 1, max = 255)
     private String name;
 
-    private Set<RoleDTO> roles = new HashSet<>();
-
     public AuthorityDTO() {
     }
 
-    public AuthorityDTO(UUID id, String name, Set<RoleDTO> roles) {
+    public AuthorityDTO(UUID id, String name) {
         super(id);
         this.name = name;
-        this.roles = roles;
     }
 
     public String getName() {
@@ -32,15 +29,6 @@ public class AuthorityDTO extends ExtendedDTO {
 
     public AuthorityDTO setName(String name) {
         this.name = name;
-        return this;
-    }
-
-    public Set<RoleDTO> getRoles() {
-        return roles;
-    }
-
-    public AuthorityDTO setRoles(Set<RoleDTO> roles) {
-        this.roles = roles;
         return this;
     }
 }
